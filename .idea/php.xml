@@ -7,26 +7,16 @@
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-stdlib" />
-      <path value="$PROJECT_DIR$/vendor/meng-tian/soap-http-binding" />
-      <path value="$PROJECT_DIR$/vendor/meng-tian/php-soap-interpreter" />
-      <path value="$PROJECT_DIR$/vendor/meng-tian/php-async-soap" />
-      <path value="$PROJECT_DIR$/vendor/meng-tian/async-soap-guzzle" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-diactoros" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-validator" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-escaper" />
       <path value="$PROJECT_DIR$/vendor/container-interop/container-interop" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-server" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-soap" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-uri" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

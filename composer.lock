@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d5cd71e1d667b9da8422cd10c849b514",
-    "content-hash": "f675a3d5ad8abbc0550fb8c253aa23e4",
+    "hash": "377e98315cbf24d15e2bd3390f38c7e4",
+    "content-hash": "5d74ae90b6906173f980fc52ba85339f",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -39,376 +39,17 @@
             "time": "2017-02-14 19:40:03"
         },
         {
-            "name": "guzzlehttp/guzzle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "8db1967d92f55de1b94b175478ed16a7dfc53a90"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/8db1967d92f55de1b94b175478ed16a7dfc53a90",
-                "reference": "8db1967d92f55de1b94b175478ed16a7dfc53a90",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.4",
-                "php": ">=5.5"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
-                "psr/log": "^1.1"
-            },
-            "suggest": {
-                "psr/log": "Required for using the Log middleware"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Guzzle is a PHP HTTP client library",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "rest",
-                "web service"
-            ],
-            "time": "2018-11-24 20:31:03"
-        },
-        {
-            "name": "guzzlehttp/promises",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/promises.git",
-                "reference": "926eaa3ff73cde2becf652b785831bcb7618568a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/926eaa3ff73cde2becf652b785831bcb7618568a",
-                "reference": "926eaa3ff73cde2becf652b785831bcb7618568a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.36"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Guzzle promises library",
-            "keywords": [
-                "promise"
-            ],
-            "time": "2018-10-30 00:20:04"
-        },
-        {
-            "name": "guzzlehttp/psr7",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/psr7.git",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5"
-            },
-            "provide": {
-                "psr/http-message-implementation": "1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "Tobias Schultze",
-                    "homepage": "https://github.com/Tobion"
-                }
-            ],
-            "description": "PSR-7 message implementation that also provides common utility methods",
-            "keywords": [
-                "http",
-                "message",
-                "psr-7",
-                "request",
-                "response",
-                "stream",
-                "uri",
-                "url"
-            ],
-            "time": "2018-12-04 20:46:45"
-        },
-        {
-            "name": "meng-tian/async-soap-guzzle",
-            "version": "v0.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/meng-tian/async-soap-guzzle.git",
-                "reference": "0b88d00f81bdbeb2d9089670163260e63e8812b9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/meng-tian/async-soap-guzzle/zipball/0b88d00f81bdbeb2d9089670163260e63e8812b9",
-                "reference": "0b88d00f81bdbeb2d9089670163260e63e8812b9",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.1",
-                "meng-tian/php-async-soap": "~1.0",
-                "meng-tian/soap-http-binding": "~0.2.0",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Meng\\AsyncSoap\\Guzzle\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Meng Tian",
-                    "email": "tianmeng94@hotmail.com"
-                }
-            ],
-            "description": "An asynchronous SOAP client build on top of Guzzle.",
-            "keywords": [
-                "Guzzle",
-                "asynchronous",
-                "soap"
-            ],
-            "time": "2016-12-03 16:54:21"
-        },
-        {
-            "name": "meng-tian/php-async-soap",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/meng-tian/php-async-soap.git",
-                "reference": "7ad271a18b7a6be099b6ef64cf8c0575267c75d3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/meng-tian/php-async-soap/zipball/7ad271a18b7a6be099b6ef64cf8c0575267c75d3",
-                "reference": "7ad271a18b7a6be099b6ef64cf8c0575267c75d3",
-                "shasum": ""
-            },
-            "suggest": {
-                "meng-tian/async-soap-artax": "A Artax implementation of meng-tian/php-async-soap.",
-                "meng-tian/async-soap-guzzle": "A Guzzle implementation of meng-tian/php-async-soap."
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Meng\\AsyncSoap\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Meng Tian",
-                    "email": "tianmeng94@hotmail.com"
-                }
-            ],
-            "description": "Interface for asynchronous SOAP client.",
-            "keywords": [
-                "asynchronous",
-                "soap"
-            ],
-            "time": "2016-05-21 12:54:23"
-        },
-        {
-            "name": "meng-tian/php-soap-interpreter",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/meng-tian/php-soap-interpreter.git",
-                "reference": "e7a0c588af9e0076d89dc1e7c03206b27e9d1f3a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/meng-tian/php-soap-interpreter/zipball/e7a0c588af9e0076d89dc1e7c03206b27e9d1f3a",
-                "reference": "e7a0c588af9e0076d89dc1e7c03206b27e9d1f3a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Meng\\Soap\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Meng Tian",
-                    "email": "tianmeng94@hotmail.com"
-                }
-            ],
-            "description": "A PHP library for interpreting SOAP messages.",
-            "keywords": [
-                "soap"
-            ],
-            "time": "2016-05-21 13:19:43"
-        },
-        {
-            "name": "meng-tian/soap-http-binding",
-            "version": "0.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/meng-tian/soap-http-binding.git",
-                "reference": "82144ced11ad66ec030f6e964799e667972b6a1b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/meng-tian/soap-http-binding/zipball/82144ced11ad66ec030f6e964799e667972b6a1b",
-                "reference": "82144ced11ad66ec030f6e964799e667972b6a1b",
-                "shasum": ""
-            },
-            "require": {
-                "meng-tian/php-soap-interpreter": "~1.0",
-                "php": ">=5.4.0",
-                "zendframework/zend-diactoros": "~1.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Meng\\Soap\\HttpBinding\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Meng Tian",
-                    "email": "tianmeng94@hotmail.com"
-                }
-            ],
-            "description": "A PHP library for binding SOAP messages to PSR-7 HTTP messages.",
-            "keywords": [
-                "http",
-                "psr-7",
-                "soap"
-            ],
-            "time": "2016-05-21 14:04:22"
-        },
-        {
             "name": "psr/container",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "2cc4a01788191489dc7459446ba832fa79a216a7"
+                "reference": "014d250daebff39eba15ba990eeb2a140798e77c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/2cc4a01788191489dc7459446ba832fa79a216a7",
-                "reference": "2cc4a01788191489dc7459446ba832fa79a216a7",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/014d250daebff39eba15ba990eeb2a140798e77c",
+                "reference": "014d250daebff39eba15ba990eeb2a140798e77c",
                 "shasum": ""
             },
             "require": {
@@ -444,97 +85,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-06-28 15:35:32"
-        },
-        {
-            "name": "psr/http-message",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP messages",
-            "homepage": "https://github.com/php-fig/http-message",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "time": "2016-08-06 14:39:51"
-        },
-        {
-            "name": "ralouphie/getallheaders",
-            "version": "2.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7.0",
-                "satooshi/php-coveralls": ">=1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/getallheaders.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ralph Khattar",
-                    "email": "ralph.khattar@gmail.com"
-                }
-            ],
-            "description": "A polyfill for getallheaders.",
-            "time": "2016-02-11 07:05:27"
+            "time": "2018-12-29 15:36:03"
         },
         {
             "name": "zendframework/zend-code",
@@ -587,68 +138,6 @@
                 "zf"
             ],
             "time": "2018-10-24 07:43:44"
-        },
-        {
-            "name": "zendframework/zend-diactoros",
-            "version": "dev-release-1.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "1dc4959014d3e7304bd87c58bcf96cf3fc63ac00"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/1dc4959014d3e7304bd87c58bcf96cf3fc63ac00",
-                "reference": "1dc4959014d3e7304bd87c58bcf96cf3fc63ac00",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || ^7.0",
-                "psr/http-message": "^1.0"
-            },
-            "provide": {
-                "psr/http-message-implementation": "1.0"
-            },
-            "require-dev": {
-                "ext-dom": "*",
-                "ext-libxml": "*",
-                "php-http/psr7-integration-tests": "dev-master",
-                "phpunit/phpunit": "^5.7.16 || ^6.0.8 || ^7.2.7",
-                "zendframework/zend-coding-standard": "~1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-release-1.8": "1.8.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/functions/create_uploaded_file.php",
-                    "src/functions/marshal_headers_from_sapi.php",
-                    "src/functions/marshal_method_from_sapi.php",
-                    "src/functions/marshal_protocol_version_from_sapi.php",
-                    "src/functions/marshal_uri_from_sapi.php",
-                    "src/functions/normalize_server.php",
-                    "src/functions/normalize_uploaded_files.php",
-                    "src/functions/parse_cookie_header.php"
-                ],
-                "psr-4": {
-                    "Zend\\Diactoros\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "description": "PSR HTTP Message implementations",
-            "homepage": "https://github.com/zendframework/zend-diactoros",
-            "keywords": [
-                "http",
-                "psr",
-                "psr-7"
-            ],
-            "time": "2018-09-27 19:45:25"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -894,12 +383,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-validator.git",
-                "reference": "a64ea16734ce1eaf6697ba154dc9ed765f3e055f"
+                "reference": "41c1383d30dcf41cf46231ba13d1dd6a449e3fb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-validator/zipball/a64ea16734ce1eaf6697ba154dc9ed765f3e055f",
-                "reference": "a64ea16734ce1eaf6697ba154dc9ed765f3e055f",
+                "url": "https://api.github.com/repos/zendframework/zend-validator/zipball/41c1383d30dcf41cf46231ba13d1dd6a449e3fb3",
+                "reference": "41c1383d30dcf41cf46231ba13d1dd6a449e3fb3",
                 "shasum": ""
             },
             "require": {
@@ -909,6 +398,7 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.0.8 || ^5.7.15",
+                "psr/http-message": "^1.0",
                 "zendframework/zend-cache": "^2.6.1",
                 "zendframework/zend-coding-standard": "~1.0.0",
                 "zendframework/zend-config": "^2.6",
@@ -922,6 +412,7 @@
                 "zendframework/zend-uri": "^2.5"
             },
             "suggest": {
+                "psr/http-message": "psr/http-message, required when validating PSR-7 UploadedFileInterface instances via the Upload and UploadFile validators",
                 "zendframework/zend-db": "Zend\\Db component, required by the (No)RecordExists validator",
                 "zendframework/zend-filter": "Zend\\Filter component, required by the Digits validator",
                 "zendframework/zend-i18n": "Zend\\I18n component to allow translation of validation error messages",
@@ -934,8 +425,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.10.x-dev",
-                    "dev-develop": "2.11.x-dev"
+                    "dev-master": "2.11.x-dev",
+                    "dev-develop": "2.12.x-dev"
                 },
                 "zf": {
                     "component": "Zend\\Validator",
@@ -957,7 +448,7 @@
                 "validator",
                 "zf2"
             ],
-            "time": "2018-02-01 17:07:06"
+            "time": "2018-12-13 21:24:30"
         }
     ],
     "packages-dev": [],

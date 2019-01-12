@@ -11,9 +11,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "guzzlehttp/guzzle": "^6.3",
-        "meng-tian/async-soap-guzzle": "^0.2.4",
-        "meng-tian/php-soap-interpreter": "^1.0",
         "zendframework/zend-soap": "^2.7"
     },
     "autoload": {

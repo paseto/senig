@@ -1,0 +1,24 @@
+{
+    "name": "paseto/senig",
+    "description": "Api for Web Services Senig",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Giovani Paseto",
+            "email": "giovaniw2@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "meng-tian/async-soap-guzzle": "^0.2.4",
+        "meng-tian/php-soap-interpreter": "^1.0",
+        "zendframework/zend-soap": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

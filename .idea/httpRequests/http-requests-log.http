@@ -1,0 +1,170 @@
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba?fFileSend=12
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T072821.200.xml
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba/EnviaXML?fFileSend=12
+Accept: application/xml
+Cache-Control: no-cache
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba/EnviaXML?fFileSend=12
+Accept: application/xml
+Cache-Control: no-cache
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba/EnviaXML
+Accept: application/xml
+Cache-Control: no-cache
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T013154.200.xml
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T012940.200.xml
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba/EnviaXML0Request
+Accept: application/xml
+Cache-Control: no-cache
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T012923.200.xml
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba/IappWebAverservice
+Accept: application/xml
+Cache-Control: no-cache
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba/EnviaXML
+Accept: application/xml
+Cache-Control: no-cache
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T012401.200.xml
+
+###
+
+POST http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T012347.200.xml
+
+###
+
+POST http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba?operation=EnviaXML&operation=EnviaXML
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T012328.200.xml
+
+###
+
+POST http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba?operation=EnviaXML
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T012303.200.xml
+
+###
+
+POST http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba?fFileSend=86933033000100
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T011954.200.xml
+
+###
+
+POST http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba?fFileSend=86933033000100
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T011904.200.xml
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba?fFileSend=86933033000100
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T011858.200.xml
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba/EnviaXML?fFileSend=86933033000100
+Accept: application/xml
+Cache-Control: no-cache
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba?fFileSend=86933033000100
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2018-12-06T011829.200.xml
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba?fFileSend=86933033000100
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-06T011531.200.xml
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br?fFileSend=86933033000100
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-06T011504.200.html
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/EnviaXML?fFileSend=86933033000100
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-06T011457.404.html
+
+###
+
+GET http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-06T011304.200.xml
+
+###
+

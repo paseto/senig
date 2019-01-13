@@ -52,7 +52,7 @@ abstract class Base
         return $this;
     }
 
-    protected static function removeLatinCharacters($value, $normalize = 'n')
+    protected function removeLatinCharacters($value, $normalize = 'n')
     {
         $from = 'áàãâéêíóôõúüçÁÀÃÂÉÊÍÓÔÕÚÜÇ';
         $to = 'aaaaeeiooouucAAAAEEIOOOUUC';
@@ -73,5 +73,95 @@ abstract class Base
         return $value;
     }
 
+
+    protected function isValidXml($xml)
+    {
+        $content = trim($xml);
+        if (empty($content)) {
+            return false;
+        }
+
+        if (stripos($content, '<!DOCTYPE html>') !== false) {
+            return false;
+        }
+
+        libxml_use_internal_errors(true);
+        simplexml_load_string($content);
+        $errors = libxml_get_errors();
+        libxml_clear_errors();
+
+        return empty($errors);
+    }
+
+
+    protected function readReturn($tag, $response)
+    {
+        libxml_use_internal_errors(true);
+        $dom = new DOMDocument('1.0', 'utf-8');
+        $dom->loadXML($response);
+        $errors = libxml_get_errors();
+        libxml_clear_errors();
+        if (!empty($errors)) {
+            $msg = '';
+            foreach ($errors as $error) {
+                $msg .= $error->message();
+            }
+            throw new \RuntimeException($msg);
+        }
+        $reason = $this->checkForFault($dom);
+        if ($reason != '') {
+            throw new \RuntimeException($reason);
+        }
+        //converte o xml em uma stdClass
+        return $this->xml2Obj($dom, $tag);
+    }
+
+    /**
+     * Convert DOMDocument in stdClass
+     * @param \DOMDocument $dom
+     * @param string $tag
+     * @return \stdClass
+     */
+    private function xml2Obj(DOMDocument $dom, $tag)
+    {
+        $node = $dom->getElementsByTagName($tag)->item(0);
+        $newdoc = new DOMDocument('1.0', 'utf-8');
+        $newdoc->appendChild($newdoc->importNode($node, true));
+        $xml = $newdoc->saveXML();
+        unset($newdoc);
+        $xml = str_replace('<?xml version="1.0" encoding="UTF-8"?>', '', $xml);
+        $xml = str_replace('<?xml version="1.0" encoding="utf-8"?>', '', $xml);
+        $xml = str_replace('&lt;?xml version="1.0" encoding="UTF-8"?&gt;', '', $xml);
+        $xml = str_replace('&lt;?xml version="1.0" encoding="utf-8"?&gt;', '', $xml);
+
+        $xml = str_replace(['&lt;', '&gt;'], ['<', '>'], $xml);
+        $docret = new DOMDocument('1.0', 'utf-8');
+        $docret->loadXML($xml);
+        $ret = $docret->getElementsByTagName($tag);
+        if ($ret->length > 0) {
+            $xml = $ret->item(1);
+            $xml = $docret->saveXML($xml);
+        }
+
+        $resp = simplexml_load_string($xml, null, LIBXML_NOCDATA);
+        $std = json_encode($resp);
+        $std = str_replace('@attributes', 'attributes', $std);
+        $std = json_decode($std);
+        return $std;
+    }
+
+    private function checkForFault(DOMDocument $dom)
+    {
+        $tagfault = $dom->getElementsByTagName('Fault')->item(0);
+        if (empty($tagfault)) {
+            return '';
+        }
+        $tagreason = $tagfault->getElementsByTagName('Reason')->item(0);
+        if (!empty($tagreason)) {
+            $reason = $tagreason->getElementsByTagName('Text')->item(0)->nodeValue;
+            return $reason;
+        }
+        return 'Houve uma falha na comunicação.';
+    }
 
 }

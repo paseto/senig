@@ -8,7 +8,6 @@
 
 namespace App;
 
-
 use Zend\Soap\Client;
 
 class Senig extends Base implements SenigInterface
@@ -16,12 +15,16 @@ class Senig extends Base implements SenigInterface
     public function enviaXML($xml, $CNPJ)
     {
         // TODO: Implement enviaXML() method.
-        $this->send();
     }
 
     public function enviaXMLRet($xml, $CNPJ, $numCTe)
     {
-        // TODO: Implement enviaXMLRet() method.
+        $std = new \stdClass();
+        $std->method = 'EnviaXMLRet';
+        $std->xml = $this->removeLatinCharacters($xml);
+        $std->CNPJ = $CNPJ;
+        $std->numCTe = $numCTe;
+        return $this->send($std);
     }
 
     public function enviaManifesto($xml, $CNPJ)
@@ -40,22 +43,33 @@ class Senig extends Base implements SenigInterface
     }
 
 
-    public function send(\stdClass $stdClass)
+    /**
+     * @param \stdClass $stdClass
+     * @return bool|\stdClass|string
+     */
+    private function send(\stdClass $stdClass)
     {
         try {
             $client = new Client(WSDL);
-            $xml = file_get_contents('43190186933033000100570010001272871190127212-cte.xml');
-            $result = $client->call('EnviaXMLRet', ['fFileSend' => $xml, 'cCNPJ' => '86933033000100', 'nNumCTE' => '127287']);
-            $fo = fopen('return.xml', 'w');
-            fwrite($fo, $client->getLastRequest());
-            $fo = fopen('response.xml', 'w');
-            fwrite($fo, $client->getLastResponse());
-            print_r($result);
+            $xml = file_get_contents($stdClass->xml);
+            if ($this->isValidXml($xml) === false){
+                return false;
+            }
+            $params = ['fFileSend' => $xml, 'cCNPJ' => $stdClass->CNPJ];
+            if (isset($stdClass->numCTe)){
+                $params = array_merge($params, ['cNumCTE'=>$stdClass->numCTe]);
+            }
+            $client->call($stdClass->method, $params);
+            $request = $client->getLastRequest();
+            $response = $client->getLastResponse();
 
-        } catch (Exception $e) {
-            echo '<prE>';
-//    print_r($client);
-            print_r($e->getMessage());
+            $std = new \stdClass();
+            $std->request = $request;
+            $std->response = $response;
+            $std->object = $this->readReturn('return', $response);
+            return $std;
+        } catch (\Exception $e) {
+            return $e->getMessage();
         }
     }
 

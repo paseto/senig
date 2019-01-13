@@ -1,1 +1,4 @@
 vendor/
+zendsoap.php
+response.xml
+return.xml

@@ -51,12 +51,17 @@ class Senig extends Base implements SenigInterface
     {
         try {
             $client = new Client(WSDL);
+            if (!is_file($stdClass->xml)) {
+                $this->setErrors('Arquivo não encontrado.');
+                return false;
+            }
             $xml = file_get_contents($stdClass->xml);
-            if ($this->isValidXml($xml) === false){
+            if ($this->isValidXml($xml) === false) {
+                $this->setErrors('Arquivo XML inválido.');
                 return false;
             }
             $params = ['fFileSend' => $xml, 'cCNPJ' => $stdClass->CNPJ];
-            if (isset($stdClass->numCTe)){
+            if (isset($stdClass->numCTe)) {
                 $params = array_merge($params, ['cNumCTE'=>$stdClass->numCTe]);
             }
             $client->call($stdClass->method, $params);
@@ -69,8 +74,8 @@ class Senig extends Base implements SenigInterface
             $std->object = $this->readReturn('return', $response);
             return $std;
         } catch (\Exception $e) {
-            return $e->getMessage();
+            $this->setErrors($e->getMessage());
+            return false;
         }
     }
-
 }

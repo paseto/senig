@@ -1,2 +1,0 @@
-
-<return xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string"><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><return><dtRec>2019-01-12T19:45:49</dtRec><cProtocolo>1541404198693303300010099001000127287666</cProtocolo><listaMensagem><cStatus>Recebido com sucesso</cStatus><dStatus>100</dStatus><dDetErr></dDetErr></listaMensagem></return></soapenv:Body></soapenv:Envelope></return>

@@ -1,18 +1,32 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: giovani
- * Date: 1/12/19
- * Time: 5:30 PM
- */
+
 
 namespace App;
+
+use DOMDocument;
 
 const WSDL = 'http://servsenigwin.virtuaserver.com.br/wsdl/WebAppAverba.exe/wsdl/IWebAppAverba';
 
 abstract class Base
 {
 
+    private $errors;
+
+    /**
+     * @return mixed
+     */
+    public function getErrors()
+    {
+        return $this->errors;
+    }
+
+    /**
+     * @param mixed $errors
+     */
+    public function setErrors($errors): void
+    {
+        $this->errors = $errors;
+    }
     private $request;
     private $response;
 
@@ -163,5 +177,4 @@ abstract class Base
         }
         return 'Houve uma falha na comunicação.';
     }
-
 }

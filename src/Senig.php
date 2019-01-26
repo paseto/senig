@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: giovani
- * Date: 1/12/19
- * Time: 5:30 PM
- */
+declare(strict_types=1);
 
-namespace App;
+namespace Paseto;
 
 use Zend\Soap\Client;
 

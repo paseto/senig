@@ -7,7 +7,7 @@ use Zend\Soap\Client;
 
 class Senig extends Base implements SenigInterface
 {
-    public function enviaXML($xml, $CNPJ)
+    public function enviaXML(string $xml, string $CNPJ)
     {
         // TODO: Implement enviaXML() method.
     }
@@ -22,20 +22,21 @@ class Senig extends Base implements SenigInterface
         return $this->send($std);
     }
 
-    public function enviaManifesto($xml, $CNPJ)
+    public function enviaManifesto(string $xml, string $CNPJ)
     {
         // TODO: Implement enviaManifesto() method.
     }
 
-    public function enviaModelo($xml, $CNPJ)
+    public function enviaModelo(string $xml, string $CNPJ)
     {
         // TODO: Implement enviaModelo() method.
     }
 
-    public function enviaXMLCANRet($xml, $CNPJ, $numCTe)
+    public function enviaXMLCANRet(string $xml, string $CNPJ, string $numCTe)
     {
         // TODO: Implement enviaXMLCANRet() method.
     }
+
 
 
     /**

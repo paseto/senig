@@ -7,6 +7,7 @@ interface SenigInterface
     public function enviaXML(string $xml, string $CNPJ);
 
     /**
+     * Send doc and get protocol
      * @param string $xml File
      * @param string $CNPJ Doc
      * @param string $numCTe

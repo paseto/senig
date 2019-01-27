@@ -12,7 +12,7 @@ class Senig extends Base implements SenigInterface
         // TODO: Implement enviaXML() method.
     }
 
-    public function enviaXMLRet($xml, $CNPJ, $numCTe)
+    public function enviaXMLRet(string $xml, string $CNPJ, string $numCTe): bool
     {
         $std = new \stdClass();
         $std->method = 'EnviaXMLRet';
@@ -40,9 +40,9 @@ class Senig extends Base implements SenigInterface
 
     /**
      * @param \stdClass $stdClass
-     * @return bool|\stdClass|string
+     * @return bool
      */
-    private function send(\stdClass $stdClass)
+    private function send(\stdClass $stdClass): bool
     {
         try {
             $client = new Client(WSDL);
@@ -57,7 +57,7 @@ class Senig extends Base implements SenigInterface
             }
             $params = ['fFileSend' => $xml, 'cCNPJ' => $stdClass->CNPJ];
             if (isset($stdClass->numCTe)) {
-                $params = array_merge($params, ['cNumCTE'=>$stdClass->numCTe]);
+                $params = array_merge($params, ['cNumCTE' => $stdClass->numCTe]);
             }
             $client->call($stdClass->method, $params);
             $request = $client->getLastRequest();
@@ -67,7 +67,8 @@ class Senig extends Base implements SenigInterface
             $std->request = $request;
             $std->response = $response;
             $std->object = $this->readReturn('return', $response);
-            return $std;
+            $this->setResponse($std);
+            return true;
         } catch (\Exception $e) {
             $this->setErrors($e->getMessage());
             return false;

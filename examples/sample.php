@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 require '../vendor/autoload.php';
 
-$senig = new \App\Senig();
+$senig = new \Paseto\Senig();
 $doc = '00000000000000';
 $result = $senig->enviaXMLRet('43171100000000000000570010001007561171170010-cte.xml', $doc, '127287');
 if ($result == false) {

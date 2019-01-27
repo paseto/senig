@@ -11,6 +11,8 @@ abstract class Base
 {
 
     private $errors;
+    private $request;
+    private $response;
 
     /**
      * @return mixed
@@ -27,8 +29,6 @@ abstract class Base
     {
         $this->errors = $errors;
     }
-    private $request;
-    private $response;
 
     /**
      * @return mixed

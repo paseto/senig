@@ -7,3 +7,10 @@
 ```sh
 $ composer require paseto/senig
 ```
+
+### Usage
+
+Example folder for details
+```sh
+examples/sample.php
+```

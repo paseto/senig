@@ -34,10 +34,13 @@ class Senig extends Base implements SenigInterface
 
     public function enviaXMLCANRet(string $xml, string $CNPJ, string $numCTe)
     {
-        // TODO: Implement enviaXMLCANRet() method.
+        $std = new \stdClass();
+        $std->method = 'EnviaXMLCANRet';
+        $std->xml = $xml;
+        $std->CNPJ = $CNPJ;
+        $std->numCTe = $numCTe;
+        return $this->send($std);
     }
-
-
 
     /**
      * @param \stdClass $stdClass

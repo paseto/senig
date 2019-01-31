@@ -8,13 +8,15 @@ $result = $senig->enviaXMLRet('43171100000000000000570010001007561171170010-cte.
 if ($result == false) {
     echo $senig->getErrors();
 } else {
-//    echo '<pre>';
-//    print_r($result->object);
-    if ($result->object->listaMensagem->dStatus != 100) {
-        echo $result->object->listaMensagem->dDetErr;
+    $response = $senig->getResponse();
+    echo '<pre>';
+    print_r($response);
+
+    if ($response->object->listaMensagem->dStatus != 100) {
+        echo $response->object->listaMensagem->dDetErr;
     }else{
-        echo $result->object->dtRec;
-        echo $result->object->cProtocolo;
-        echo $result->object->listaMensagem->cStatus;
+        echo $response->object->dtRec;
+        echo $response->object->cProtocolo;
+        echo $response->object->listaMensagem->cStatus;
     }
 }

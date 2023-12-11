@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Paseto;
 
-use Zend\Soap\Client;
+use Laminas\Soap\Client;
 
 class Senig extends Base implements SenigInterface
 {
